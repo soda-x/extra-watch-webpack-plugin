@@ -32,7 +32,7 @@ import ExtraWathWebpackPlugin from 'extra-watch-webpack-plugin';
 ......
 {
   plugins: [
-    new WatchExtraWebpackPlugin({
+    new ExtraWathWebpackPlugin({
       fies: [ 'path/to/file' ],
       dirs: [ 'path/to/dir' ]
     }),
