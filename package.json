@@ -1,0 +1,67 @@
+{
+  "name": "extra-watch-webpack-plugin",
+  "version": "0.1.0",
+  "description": "extra-watch-webpack-plugin would help you to attach extra files or dirs to webpack's watch system",
+  "main": "./lib/index.js",
+  "scripts": {
+    "ci": "nyc report --reporter=text-lcov | coveralls",
+    "pretest": "eslint --ignore-path .gitignore src",
+    "test": "nyc --reporter=lcov --reporter=text ava",
+    "release": "babel src --out-dir lib",
+    "prepublish": "npm run test && npm run release"
+  },
+  "ava": {
+    "files": [
+      "src/__tests__/**/*.js"
+    ],
+    "concurrency": 5,
+    "require": "babel-register",
+    "babel": "inherit"
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules",
+      "**/__tests__",
+      "**/lib"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pigcan/extra-watch-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-plugin",
+    "watch"
+  ],
+  "author": "pigcan <jinangjay818@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pigcan/extra-watch-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/pigcan/extra-watch-webpack-plugin#readme",
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "nyc": "^11.2.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  }
+}
