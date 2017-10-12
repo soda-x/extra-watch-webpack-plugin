@@ -1,3 +1,5 @@
+import { join } from 'path';
+
 import webpack from 'webpack';
 import MemoryFileSystem from 'memory-fs'; // eslint-disable-line import/no-extraneous-dependencies
 
@@ -9,15 +11,15 @@ export default function createCompiler(options = {}) {
   const compiler = webpack({
     bail: true,
     cache: false,
-    entry: `${__dirname}/fixtures/index.js`,
+    entry: join(__dirname, 'fixtures', 'index.js'),
     output: {
-      path: `${__dirname}/fixtures/dist`,
+      path: join(__dirname, 'fixtures', 'dist'),
       filename: '[name].js',
       chunkFilename: '[name].js',
     },
     plugins: [
       new ExtraWatchWebpackPlugin({
-        files: `${__dirname}/fixtures/index.json`,
+        files: join(__dirname, 'fixtures', 'index.json'),
       }),
       new InvalidPlugin(cb),
     ],
