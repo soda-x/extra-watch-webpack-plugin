@@ -5,14 +5,14 @@
   "main": "./lib/index.js",
   "scripts": {
     "ci": "nyc report --reporter=text-lcov | coveralls",
-    "pretest": "eslint --ignore-path .gitignore src",
+    "lint": "eslint --ignore-path .gitignore src --fix ",
     "test": "nyc --reporter=lcov --reporter=text ava",
     "release": "babel src --out-dir lib",
-    "prepublish": "npm run test && npm run release"
+    "prepublish": "npm run lint && npm run test && npm run release"
   },
   "ava": {
     "files": [
-      "src/__tests__/**/*.js"
+      "src/__tests__/index.test.js"
     ],
     "concurrency": 5,
     "require": "babel-register",
@@ -53,7 +53,9 @@
     "eslint": "^4.8.0",
     "eslint-config-airbnb": "^16.0.0",
     "eslint-plugin-import": "^2.7.0",
-    "nyc": "^11.2.1"
+    "memory-fs": "^0.4.1",
+    "nyc": "^11.2.1",
+    "webpack": "^3.6.0"
   },
   "babel": {
     "presets": [
@@ -63,5 +65,9 @@
     "plugins": [
       "add-module-exports"
     ]
+  },
+  "dependencies": {
+    "lodash.uniq": "^4.5.0",
+    "schema-utils": "^0.3.0"
   }
 }

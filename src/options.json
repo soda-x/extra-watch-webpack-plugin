@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": [ "string", "array" ]
+    },
+    "dirs": {
+      "type": [ "string", "array" ]
+    }
+  },
+  "additionalProperties": false
+}
