@@ -9,7 +9,7 @@ export default class ExtraWatchWebpackPlugin {
   };
 
   constructor(options = {}) {
-    validateOptions(require('./options.json'), options, 'ExtraWatchWebpackPlugin'); // eslint-disable-line
+    validateOptions(require('../options.json'), options, 'ExtraWatchWebpackPlugin'); // eslint-disable-line
     this.options = { ...ExtraWatchWebpackPlugin.defaults, ...options };
   }
 

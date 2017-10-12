@@ -7,7 +7,7 @@
     "ci": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint --ignore-path .gitignore src --fix ",
     "test": "nyc --reporter=lcov --reporter=text ava",
-    "release": "babel src --out-dir lib",
+    "release": "babel src --out-dir lib --ignore /__tests__/",
     "prepublish": "npm run lint && npm run test && npm run release"
   },
   "ava": {
@@ -69,5 +69,9 @@
   "dependencies": {
     "lodash.uniq": "^4.5.0",
     "schema-utils": "^0.3.0"
-  }
+  },
+  "files": [
+    "lib/",
+    "options.json"
+  ]
 }
