@@ -16,7 +16,7 @@ export default class ExtraWatchWebpackPlugin {
   apply(compiler) {
     compiler.plugin('after-compile', (compilation, callback) => {
       const { files, dirs } = this.options;
-      let { fileDependencies, contextDepencies } = compilation;
+      let { fileDependencies, contextDependencies } = compilation;
 
       if (files.length > 0) {
         fileDependencies = uniq(fileDependencies.concat(files));
@@ -24,8 +24,8 @@ export default class ExtraWatchWebpackPlugin {
       }
 
       if (dirs.length > 0) {
-        contextDepencies = uniq(contextDepencies.concat(dirs));
-        compilation.contextDepencies = contextDepencies; // eslint-disable-line
+        contextDependencies = uniq(contextDependencies.concat(dirs));
+        compilation.contextDependencies = contextDependencies; // eslint-disable-line
       }
       callback();
     });
