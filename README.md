@@ -4,37 +4,34 @@
 
 <div align="center">
   <a href="https://github.com/webpack/webpack">
-    <img width="200" height="200"
-      src="https://webpack.js.org/assets/icon-square-big.svg">
+    <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
   </a>
   <h1>extra watch webpack plugin</h1>
   <p>extra-watch-webpack-plugin would help you to attach extra files or dirs to webpack's watch system</p>
 </div>
 
-
 <h2 align="center">Install</h2>
 
-```bash
+```sh
 npm install --save extra-watch-webpack-plugin
 ```
 
 <h2 align="center">Options</h2>
 
-- `files`: `string` or `array`, defualt `[]`, attach extra files to webpack's watch system
-
-- `dirs`: `string` or `array`, defualt `[]`, attach extra dirs to webpack's watch system
+- `files`: `string` or `array`, default `[]`, attach extra files to webpack's watch system
+- `dirs`: `string` or `array`, default `[]`, attach extra dirs to webpack's watch system
 
 <h2 align="center">Usage</h2>
 
 ```js
 // webpack.config.js
-import ExtraWathWebpackPlugin from 'extra-watch-webpack-plugin';
+import ExtraWatchWebpackPlugin from 'extra-watch-webpack-plugin';
 ......
 {
   plugins: [
-    new ExtraWathWebpackPlugin({
-      fies: [ 'path/to/file' ],
-      dirs: [ 'path/to/dir' ]
+    new ExtraWatchWebpackPlugin({
+      files: [ 'path/to/file' ],
+      dirs: [ 'path/to/dir' ],
     }),
   ],
 }
