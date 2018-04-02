@@ -19,7 +19,8 @@ export default function createCompiler(options = {}) {
     },
     plugins: [
       new ExtraWatchWebpackPlugin({
-        files: join(__dirname, 'fixtures', 'index.json'),
+        files: 'src/**/*.json',
+        dirs: join(__dirname, 'fixtures', 'watchDir'),
       }),
       new InvalidPlugin(cb),
     ],
