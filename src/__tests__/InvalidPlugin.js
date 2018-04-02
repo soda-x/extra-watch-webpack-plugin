@@ -4,7 +4,7 @@ export default class InvalidPlugin {
   }
 
   apply(compiler) {
-    compiler.plugin('invalid', (changeFilePath) => {
+    compiler.hooks.invalid.tap('invalid', (changeFilePath) => {
       this.cb(changeFilePath);
     });
   }
