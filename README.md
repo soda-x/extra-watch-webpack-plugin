@@ -8,6 +8,7 @@
   </a>
   <h1>extra watch webpack plugin</h1>
   <p>extra-watch-webpack-plugin would help you to attach extra files or dirs to webpack's watch system</p>
+  <p>support webpack@1,2,3,4</p>
 </div>
 
 <h2 align="center">Install</h2>
@@ -18,7 +19,7 @@ npm install --save extra-watch-webpack-plugin
 
 <h2 align="center">Options</h2>
 
-- `files`: `string` or `array`, default `[]`, attach extra files to webpack's watch system
+- `files`: `string` (absolute path or glob pattern) or `array`, default `[]`, attach extra files to webpack's watch system
 - `dirs`: `string` or `array`, default `[]`, attach extra dirs to webpack's watch system
 
 <h2 align="center">Usage</h2>
@@ -30,7 +31,7 @@ import ExtraWatchWebpackPlugin from 'extra-watch-webpack-plugin';
 {
   plugins: [
     new ExtraWatchWebpackPlugin({
-      files: [ 'path/to/file' ],
+      files: [ 'path/to/file', 'src/**/*.json' ],
       dirs: [ 'path/to/dir' ],
     }),
   ],

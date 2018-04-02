@@ -1,5 +1,9 @@
 ## ExtraWatchWebpackPlugin
 
+### 1.0.0
+
+- feat: files support glob patterns. Ref #15
+- feat: support webpack 1,2,3,4
 
 ### 0.2.0
 

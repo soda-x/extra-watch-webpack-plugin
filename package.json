@@ -1,6 +1,6 @@
 {
   "name": "extra-watch-webpack-plugin",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "extra-watch-webpack-plugin would help you to attach extra files or dirs to webpack's watch system",
   "main": "./lib/index.js",
   "scripts": {
