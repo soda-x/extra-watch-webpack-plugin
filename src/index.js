@@ -3,6 +3,8 @@ import uniq from 'lodash.uniq';
 import isGlob from 'is-glob';
 import glob from 'glob';
 
+import { resolve } from 'path';
+
 function getFileAndContextDeps(compilation, files, dirs, cwd) {
   const { fileDependencies, contextDependencies } = compilation;
   const isWebpack4 = compilation.hooks;
@@ -58,13 +60,11 @@ export default class ExtraWatchWebpackPlugin {
         } = getFileAndContextDeps(compilation, files, dirs, cwd);
         if (files.length > 0) {
           fileDependencies.forEach((file) => {
-            console.log('file added to ===>', file);
-            compilation.fileDependencies.add(file);
+            compilation.fileDependencies.add(resolve(file));
           });
         }
         if (dirs.length > 0) {
           contextDependencies.forEach((context) => {
-            console.log('context added to ===>', context);
             compilation.contextDependencies.add(context);
           });
         }
