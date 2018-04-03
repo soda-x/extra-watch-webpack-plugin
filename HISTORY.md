@@ -1,5 +1,9 @@
 ## ExtraWatchWebpackPlugin
 
+### 1.0.1
+
+- bugfix: compatibility on windows
+
 ### 1.0.0
 
 - feat: files support glob patterns. Ref #15
