@@ -10,7 +10,7 @@ function getFileAndContextDeps(compilation, files, dirs, cwd) {
   const isWebpack4 = compilation.hooks;
   let fds = isWebpack4 ? [...fileDependencies] : fileDependencies;
   let cds = isWebpack4 ? [...contextDependencies] : contextDependencies;
-  console.log('cds', cds);
+  
   if (files.length > 0) {
     files.forEach((pattern) => {
       let f = pattern;
