@@ -1,5 +1,9 @@
 ## ExtraWatchWebpackPlugin
 
+### 1.0.2
+
+- remove useless console.log https://github.com/pigcan/extra-watch-webpack-plugin/pull/18
+
 ### 1.0.1
 
 - bugfix: compatibility on windows
