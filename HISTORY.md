@@ -1,5 +1,10 @@
 ## ExtraWatchWebpackPlugin
 
+
+### 1.0.3
+
+- fix issue that npmjs.com shows `No readme found!`
+
 ### 1.0.2
 
 - remove useless console.log https://github.com/pigcan/extra-watch-webpack-plugin/pull/18
