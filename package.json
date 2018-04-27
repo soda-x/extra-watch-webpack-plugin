@@ -74,6 +74,7 @@
   },
   "files": [
     "lib/",
-    "options.json"
+    "options.json",
+    "README.md"
   ]
 }
