@@ -55,7 +55,7 @@
     "eslint-plugin-import": "^2.10.0",
     "memory-fs": "^0.4.1",
     "nyc": "^11.2.1",
-    "webpack": "^4.21.0"
+    "webpack": "^4.36.0"
   },
   "babel": {
     "presets": [
