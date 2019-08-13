@@ -51,7 +51,7 @@
     "babel-register": "^6.26.0",
     "coveralls": "^3.0.0",
     "eslint": "^4.17.0",
-    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.10.0",
     "memory-fs": "^0.4.1",
     "nyc": "^11.2.1",
