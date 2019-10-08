@@ -53,7 +53,7 @@
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.10.0",
-    "memory-fs": "^0.4.1",
+    "memory-fs": "^0.5.0",
     "nyc": "^11.2.1",
     "webpack": "^4.21.0"
   },
